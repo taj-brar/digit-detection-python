@@ -8,3 +8,4 @@
 # Datasource local storage ignored files
 /.idea/dataSources/
 /.idea/dataSources.local.xml
+/bin/

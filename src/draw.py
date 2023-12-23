@@ -1,12 +1,13 @@
 import cv2
 import numpy as np
+import os
 
 # CONSTANTS
 WINDOW_NAME = "Draw a digit"
-WINDOW_SIZE = 256
+WINDOW_SIZE = 200
 ENTER_ASCII = 13
 WHITE_COLOR = (255, 255, 255)
-LINE_WIDTH = 5
+LINE_WIDTH = 20
 
 # GLOBALS
 img = np.zeros((WINDOW_SIZE, WINDOW_SIZE, 1), np.uint8)
@@ -45,6 +46,8 @@ def draw():
 
         # break loop when escape key is pressed
         if cv2.waitKey(1) == ENTER_ASCII:
+            os.chdir(r"C:/Users/Taj/Documents/GitHub/digit-detection-python/bin")
+            cv2.imwrite(r"C:/Users/Taj/Documents/GitHub/digit-detection-python/bin/image.png", img)
             break
 
     # close windows
